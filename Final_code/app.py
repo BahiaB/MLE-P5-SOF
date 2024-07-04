@@ -2,8 +2,7 @@ from fastapi import FastAPI # type: ignore
 from joblib import load # type: ignore
 from pydantic import BaseModel # type: ignore
 from final_model import preprocess_data,final_model, vectorize_data, select_top_n_tags
-#import os
-#os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
+
 
 app = FastAPI()
 
