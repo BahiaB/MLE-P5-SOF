@@ -3,7 +3,6 @@ from joblib import load # type: ignore
 from pydantic import BaseModel # type: ignore
 from final_model import preprocess_data,final_model, vectorize_data, select_top_n_tags
 
-
 app = FastAPI()
 
 try:
@@ -23,7 +22,6 @@ class Item(BaseModel):
 @app.post("/predict/")
 async def make_prediction(item: Item):
 
-    # Prétrait
     processed_data = preprocessing([item.text])
     vec_data = vectorizer(processed_data)
     prediction = model(vec_data)
