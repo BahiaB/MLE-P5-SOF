@@ -1,0 +1,4 @@
+URL pour accéder a l'app sur Azure
+
+http://20.50.169.83/docs
+

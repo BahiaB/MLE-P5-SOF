@@ -206,7 +206,7 @@ df['Title'] = df['Title'].fillna('')
 # Combinaison des colonnes avec une gestion propre
 df['Comb'] = df.apply(lambda row: str(row['Body']) + " " + str(row['Title']), axis=1)
 comb= []
-comb = df['Comb'][:1000]
+comb = df['Comb']
 preprocessed_comb = pipeline.fit_transform(comb)
 
 # Enregistrer la fonction
@@ -222,7 +222,7 @@ processed_new_data = loaded_preprocess_function(new_data)
 # preprocessing des tags
 df['Tags'] = df.apply(lambda row: str(row['Tags']), axis =1)
 tags = []
-tags = df['Tags'][:1000]
+tags = df['Tags']
 preprocessed_tags = pipeline_tags.fit_transform(tags)
 print("preprossed tags",preprocessed_tags[:10])
 
@@ -246,9 +246,9 @@ X_train, X_test, y_train, y_test = train_test_split(X,y,
 )
 
 print('X_train shape',X_train.shape,'X_train shape',X_test.shape)
-X_train_sample = X_train.sample(500, random_state=42)
+X_train_sample = X_train.sample(4000, random_state=42)
 y_train_sample = y_train.loc[X_train_sample.index]
-X_test_sample = X_test.sample(50, random_state=42)
+X_test_sample = X_test.sample(800, random_state=42)
 y_test_sample = y_test.loc[X_test_sample.index]
 
 print('X_train shape',X_train_sample.shape,'X_train shape',X_test_sample.shape)
