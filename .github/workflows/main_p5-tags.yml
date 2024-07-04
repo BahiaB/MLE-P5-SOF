@@ -1,6 +1,6 @@
 
 
-name: Build and deploy Python app to Azure Web App - P5-tags
+name: Build and deploy P5-tags
 
 on:
   push:
@@ -29,11 +29,12 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: download nltk
-        run: python -m dowload_nltk
+        run: python -m nltk.downloader punkt stopwords averaged_perceptron_tagger wordnet
 
       - name: pytest
-        run: pytest test_final_model.py
-
+        run: |
+              cd Final_code
+              pytest test_final_model.py
     
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
