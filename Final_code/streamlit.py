@@ -10,6 +10,8 @@ x = st.text_input("Please enter your text here", "text goes here")
 
 if st.button("Search tags"):
     data = {'text': x}
-    response = requests.post('http://127.0.0.1:8002/predict/', json=data)
+ 
+    response = requests.post('http://20.50.169.83/predict/', json=data)
+    #response = requests.post('http://127.0.0.1:8002/predict/', json=data)
     prediction = response.json()['prediction'][0]
     st.write(f"Your suggested Tag are {prediction}")
