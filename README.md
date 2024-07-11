@@ -71,10 +71,9 @@ Le projet est organisé comme suit :
    - Une adresse ip locale sera fournie pour acceder a l'API
 
 4. **Point d'entrée sur le cloud** :
-   - http://20.93.223.113/docs
+   - URL: http://20.50.169.83/docs
    - Dans l'onglet 'POST', cliquez sur la petite fleche en haut a droite pour dérouler, puis cliquez sur "try it out"
    - Le texte "{"text": "string"}" est desormais modifiable, il suffit de remplacer 'string' par le texte pour lequel nous souhaitons avoir des tags.
-   - !!! ATTENTION !!! Il faut remplacer string, mais garder les guillemets.
    - cliquez sur execute
    - La réponse apparait un peu plus bas dans l'onglet " response body"
 
